@@ -26,7 +26,7 @@ namespace Expense_Tracker.Controllers
         }
 
         // GET: Transaction/AddOrEdit
-        public IActionResult AddOrEdit(int id = 0)
+        public IActionResult CreateOrEdit(int id = 0)
         {
             PopulateCategories();
             if (id == 0)
@@ -40,7 +40,7 @@ namespace Expense_Tracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddOrEdit([Bind("TransactionId,CategoryId,Amount,Note,Date")] Transaction transaction)
+        public async Task<IActionResult> CreateOrEdit([Bind("TransactionId,CategoryId,Amount,Note,Date")] Transaction transaction)
         {
             if (ModelState.IsValid)
             {
