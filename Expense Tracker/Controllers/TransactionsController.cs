@@ -53,22 +53,7 @@ namespace Expense_Tracker.Controllers
             return View(transaction);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddOrEdit([Bind("TransactionId,CategoryId,Amount,Note,Date")] Transaction transaction)
-        {
-            if (ModelState.IsValid)
-            {
-                if (transaction.TransactionId == 0)
-                    _context.Add(transaction);
-                else
-                    _context.Update(transaction);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            PopulateCategories();
-            return View(transaction);
-        }
+       
 
         // POST: Transaction/Delete/5
         [HttpPost, ActionName("Delete")]
