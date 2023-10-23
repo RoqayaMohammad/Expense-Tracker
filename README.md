@@ -10,7 +10,7 @@ a dashboard that Contains:<br/>
 <br/> <br/> <br/>
 <b>Dashboard:</b><br/>
 - labels calculating the following: Total Income, Total Expense, Balance<br/>
-- Chart : Doughnut Cahrt that shows the Expense Categories by ints percentages Descendingly<br/>
+- Chart : Doughnut Chart that shows the Expense Categories by its percentages Descendingly<br/>
 - Chart: Spline Chart thay showing Expense VS Income for the last 7 days<br/>
 - a Wideget of the recent 5 Transactions.<br/>
    
